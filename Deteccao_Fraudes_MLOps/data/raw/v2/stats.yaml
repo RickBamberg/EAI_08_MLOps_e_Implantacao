@@ -1,0 +1,14 @@
+numerical_features:
+  amount:
+    mean: 198.7
+    std: 132.4
+    min: 1.0
+    max: 1500.0
+
+label:
+  fraud:
+    count: 18500
+    percent: 2.98
+  normal:
+    count: 601500
+    percent: 97.02

@@ -1,0 +1,33 @@
+data_version: v1
+dataset_name: BankSim
+description: >
+  Dataset sintético de transações bancárias utilizado
+  para o primeiro modelo de detecção de fraudes.
+
+period:
+  start: "2013-01-01"
+  end: "2013-06-30"
+
+records:
+  total: 594643
+  fraud: 5877
+  normal: 588766
+
+label_distribution:
+  fraud_percent: 0.99
+  normal_percent: 99.01
+
+features:
+  - step
+  - amount
+  - customer
+  - merchant
+  - category
+  - age
+  - gender
+
+target: fraud
+
+notes:
+  - Dataset altamente desbalanceado
+  - Representa comportamento inicial (Concept C1)

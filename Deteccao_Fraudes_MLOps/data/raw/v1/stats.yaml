@@ -1,0 +1,28 @@
+numerical_features:
+  amount:
+    mean: 152.3
+    std: 88.1
+    min: 1.0
+    max: 980.0
+
+  step:
+    mean: 243.5
+    std: 144.2
+    min: 1
+    max: 743
+
+categorical_features:
+  category:
+    unique_values: 15
+  merchant:
+    unique_values: 693
+  customer:
+    unique_values: 4112
+
+label:
+  fraud:
+    count: 5877
+    percent: 0.99
+  normal:
+    count: 588766
+    percent: 99.01

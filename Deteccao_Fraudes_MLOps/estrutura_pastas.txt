@@ -1,0 +1,187 @@
+
+
+ESTRUTURA DO PROJETO - DETECCAO_FRAUDES_MLOPS
+==============================================
+
+Deteccao_Fraudes_MLOps/
+│
+├── 📄 Arquivos Raiz
+│   ├── PROJECT_STRUCTURE.md
+│   ├── README.md
+│   ├── requirements.txt
+│   └── roadmap.md
+│
+├── 📁 artifacts/
+│   ├── model_v1/
+│   │   ├── closure.md
+│   │   ├── model.pkl
+│   │   ├── model_info.yaml
+│   │   └── scaler.pkl
+│   │
+│   └── model_v2/
+│       ├── closure.md
+│       ├── model.pkl
+│       ├── model_info.yaml
+│       └── scaler.pkl
+│
+├── 📁 data/
+│   ├── inference/
+│   │   └── v1/
+│   │       ├── input_transactions.csv
+│   │       └── output_predictions.csv
+│   │
+│   ├── raw/
+│   │   ├── v1/
+│   │   │   ├── bs140513_032310.csv
+│   │   │   ├── metadata.yaml
+│   │   │   └── stats.yaml
+│   │   │
+│   │   └── v2/
+│   │       ├── bs140513_032310_v2.csv
+│   │       ├── metadata.yaml
+│   │       └── stats.yaml
+│   │
+│   └── temp/
+│       ├── sample_data.csv
+│       └── scaler.pkl
+│
+├── 📁 doc/
+│   ├── v1/
+│   │   ├── Dashboard_Fraudes.png
+│   │   └── Relatorio_Fraudes_20251227.csv
+│   │
+│   └── v2/
+│       (vazio)
+│
+├── 📁 mlruns/
+│   ├── 0/
+│   │   ├── meta.yaml
+│   │   ├── 6bd047614af9476b95d90a218fa24679/
+│   │   │   ├── meta.yaml
+│   │   │   ├── artifacts/
+│   │   │   │   └── model/
+│   │   │   ├── metrics/
+│   │   │   │   ├── f1
+│   │   │   │   ├── precision
+│   │   │   │   ├── recall
+│   │   │   │   ├── roc_auc
+│   │   │   │   └── tempo
+│   │   │   ├── params/
+│   │   │   │   ├── max_depth
+│   │   │   │   ├── min_samples_leaf
+│   │   │   │   ├── n_estimators
+│   │   │   │   └── random_state
+│   │   │   └── tags/
+│   │   │       ├── author
+│   │   │       ├── experiment_type
+│   │   │       └── ...
+│   │   │
+│   │   │
+│   │   └── models/
+│   │
+│   └── (estrutura de rastreamento MLflow)
+│
+├── 📁 monitoring/
+│   ├── drift_decision.md
+│   └── model_v1_evaluation_on_v2.md
+│
+├── 📁 notebooks/
+│   ├── fraud_detection_banksim_MLOps.ipynb
+│   └── relatorio_para_auditoria.ipynb
+│
+├── 📁 processed/
+│   └── v1/
+│       └── README.md
+│
+├── 📁 src/
+│   ├── api/
+│   │   ├── main.py
+│   │   ├── model_loader.py
+│   │   └── schemas.py
+│   ├── config/
+│   │   └── model.yaml
+│   │
+│   ├── data/
+│   │   └── load_data.py
+│   │
+│   ├── eda/
+│   │   └── eda_basic.py
+│   │
+│   ├── features/
+│   │   ├── v1/
+│   │   │   ├── build_features.py
+│   │   │   ├── customer_features.py
+│   │   │   ├── feature_pipeline.py
+│   │   │   ├── features.yaml
+│   │   │   ├── local_features.py
+│   │   │   ├── merchant_features.py
+│   │   │   └── step_features.py
+│   │   │
+│   │   └── v2/
+│   │       └── build_features.py
+│   │
+│   ├── inference/
+│   │   ├── v1/
+│   │   │   └── predict.py
+│   │   │
+│   │   └── v2/
+│   │       └── predict.py
+│   │
+│   └── models/
+│       ├── v1/
+│       │   ├── .ipynb_checkpoints/
+│       │   ├── base_model.py
+│       │   ├── build_artifacts.py
+│       │   ├── evaluate.py
+│       │   ├── pipeline.py
+│       │   ├── scaler.py
+│       │   ├── train_gb.py
+│       │   ├── train_lr.py
+│       │   └── train_rf.py
+│       │
+│       └── v2/
+│           ├── build_artifacts.py
+│           ├── evaluate.py
+│           ├── pipeline.py
+│           ├── scaler.py
+│           └── train.py
+│
+└── 📁 utils/
+    ├── Build_artf.ipynb
+    └── Build_artf1.ipynb
+
+
+DESCRIÇÃO DOS COMPONENTES PRINCIPAIS
+====================================
+
+📌 CONFIGURAÇÃO E DOCUMENTAÇÃO
+  - requirements.txt: Dependências do projeto
+  - README.md: Documentação principal
+  - PROJECT_STRUCTURE.md: Estrutura do projeto
+  - roadmap.md: Roadmap de desenvolvimento
+
+📌 DADOS (data/)
+  - raw/: Dados brutos (v1 e v2)
+  - temp/: Dados temporários
+  - inference/: Dados para inferência
+
+📌 MODELOS (src/models/)
+  - v1/: Versão 1 com múltiplos treinadores (RF, LR, GB)
+  - v2/: Versão 2 com treinamento unificado
+
+📌 FEATURES (src/features/)
+  - v1/: Pipeline completo (customer, merchant, local, step features)
+  - v2/: Versão simplificada
+
+📌 ARTEFATOS (artifacts/)
+  - model_v1/: Modelo treinado, scaler e documentação
+  - model_v2/: Idem para versão 2
+
+📌 EXPERIMENTOS (mlruns/)
+  - Rastreamento MLflow com múltiplas runs
+  - Métricas, parâmetros e artefatos de cada experimento
+
+📌 DOCUMENTAÇÃO E MONITORAMENTO
+  - doc/: Relatórios e visualizações
+  - monitoring/: Análises de drift e avaliações
+  - notebooks/: Jupyter notebooks exploratórios

@@ -1,0 +1,6 @@
+step,customer,merchant,category,amount,gender,age,zipcodeOri,zipMerchant
+1,C123,M001,food,23.5,M,35,28001,28001
+1,C123,M002,electronics,899.9,M,35,28001,28099
+2,C456,M010,travel,1200.0,F,52,10010,10010
+2,C456,M010,travel,50.0,F,52,10010,10010
+3,C789,M050,fashion,199.0,F,22,90210,90210

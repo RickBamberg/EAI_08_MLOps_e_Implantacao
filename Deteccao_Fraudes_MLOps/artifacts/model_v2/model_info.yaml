@@ -1,0 +1,36 @@
+model:
+  name: fraud_detection
+  version: v2
+  algorithm: RandomForestClassifier
+  objective: Binary classification (fraud / non-fraud)
+
+data:
+  feature_set: features/v2
+  target: fraud
+  inference_target: none
+
+training:
+  scaler: StandardScaler
+  threshold: 0.5
+  metrics:
+    - roc_auc
+    - precision
+    - recall
+    - f1_score
+
+artifacts:
+  model_path: artifacts/model.pkl
+  scaler_path: artifacts/scaler.pkl
+
+mlflow:
+  experiment_name: fraud_detection_mlops
+  run_type: final
+
+api:
+  endpoint: /predict
+  input_contract:
+    - step
+    - amount
+    - customer
+    - merchant
+    - category

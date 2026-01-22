@@ -1,0 +1,27 @@
+model_version: v1
+algorithm: RandomForestClassifier
+train_date: 2026-01-XX
+
+features_used: 22
+
+metrics:
+  auc: 0.XXXX
+  recall_fraud: 0.XX
+  precision_fraud: 0.XX
+  f1_fraud: 0.XX
+
+data:
+  dataset: BankSim
+  data_version: v1
+  split: stratified
+  test_size: 0.3
+  random_state: 42
+
+notes:
+  - Leakage removido
+  - Features agregadas por cliente, tempo e merchant
+  - O modelo Gradient Boosting apresentou melhor F1-score e precisão.
+    Apesar de tempo de inferência maior que Random Forest, o tempo médio
+    permaneceu dentro do SLA esperado para processamento batch.
+  - Os artefatos do modelo e do scaler foram persistidos e validados,
+    garantindo reprodutibilidade da versão v1.

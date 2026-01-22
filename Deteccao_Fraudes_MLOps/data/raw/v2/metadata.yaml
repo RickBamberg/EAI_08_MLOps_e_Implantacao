@@ -1,0 +1,27 @@
+data_version: v2
+dataset_name: BankSim
+description: >
+  Nova versão dos dados refletindo mudança no comportamento
+  de transações e aumento da incidência de fraudes.
+
+period:
+  start: "2013-07-01"
+  end: "2013-12-31"
+
+records:
+  total: 620000
+  fraud: 18500
+  normal: 601500
+
+label_distribution:
+  fraud_percent: 2.98
+  normal_percent: 97.02
+
+changes_from_previous:
+  - Aumento significativo na taxa de fraude
+  - Maior concentração de fraudes em categorias específicas
+  - Mudança no padrão de valores transacionados
+
+notes:
+  - Possível início de Concept Drift
+  - Necessário avaliar impacto no modelo v1
