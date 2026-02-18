@@ -1,0 +1,193 @@
+2026-01-23 16:57:44 INFO     [app:81] Configuração de logging aplicada.
+2026-01-23 16:57:44 INFO     [app:20] Sistema de Logging Configurado.
+2026-01-23 16:58:08 INFO     [app:26] Modelo e pré-processador carregados com sucesso.
+2026-01-23 17:00:05 INFO     [app:81] Configuração de logging aplicada.
+2026-01-23 17:00:05 INFO     [app:20] Sistema de Logging Configurado.
+2026-01-23 17:00:07 INFO     [app:26] Modelo e pré-processador carregados com sucesso.
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     85.0              66.0               29.0      80.0  26.6                   0.0   31.0
+2026-01-23 17:03:31 DEBUG    [app:140] Dados após pré-processamento: [[-5.625       0.         -0.6744186  -1.22191175 -0.5114591   1.
+  31.          0.        ]]
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0     90.0              70.0               25.0      80.0  24.0                   0.0   28.0
+2026-01-23 17:03:31 DEBUG    [app:140] Dados após pré-processamento: [[-5.625      -0.57142857 -0.97674419 -1.05482068 -0.18292616  2.
+  28.          0.        ]]
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       4.0    115.0              72.0               35.0     150.0  29.5                   0.0   35.0
+2026-01-23 17:03:31 DEBUG    [app:140] Dados após pré-processamento: [[ 3.12500000e+00  8.57142857e-01 -3.37209302e-01 -2.19365364e-01
+  -1.86596920e-02  4.00000000e+00  3.50000000e+01  0.00000000e+00]]
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       3.0    125.0              80.0               30.0       0.0  32.0                   1.0   42.0
+2026-01-23 17:03:31 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.14285714  -0.04651163   0.11481676   0.63840618
+    3.          42.           1.        ]]
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       6.0    148.0              72.0               35.0       0.0  33.6                   1.0   50.0
+2026-01-23 17:03:31 DEBUG    [app:140] Dados após pré-processamento: [[-1.56250000e+01  8.57142857e-01  1.39534884e-01  8.83435660e-01
+  -1.86596920e-02  6.00000000e+00  5.00000000e+01  1.00000000e+00]]
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0    183.0              64.0               30.0       0.0  23.3                   1.0   32.0
+2026-01-23 17:03:31 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.14285714  -1.05813953   2.05307311  -0.67572557
+    1.          32.           1.        ]]
+2026-01-23 17:03:31 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       8.0    181.0              68.0               36.0     495.0  30.1                   1.0   53.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[46.25        1.         -0.26744186  1.98623668 -0.34719263  8.
+  53.          1.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     60.0              62.0               20.0       0.0  21.0                   0.0   22.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -1.28571429  -1.3255814   -2.05736707  -0.83999204
+    0.          22.           0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0      10.0    200.0              90.0               40.0     600.0  40.0                   1.0   60.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[59.375       1.57142857  0.88372093  2.62118273  1.45973853 10.
+  60.          1.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0    140.0              85.0               30.0     200.0  28.9                   1.0   45.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[ 9.375       0.14285714 -0.40697674  0.61608996  1.04907235  2.
+  45.          1.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       7.0    130.0              88.0               35.0       0.0  33.1                   1.0   44.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.85714286   0.08139535   0.28190783   1.29547206
+    7.          44.           1.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     92.0              70.0               25.0      80.0  22.1                   0.0   25.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-5.625      -0.57142857 -1.19767442 -0.98798426 -0.18292616  0.
+  25.          0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     89.0              66.0               23.0      94.0  21.5                   0.0   28.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-3.875      -0.85714286 -1.26744186 -1.0882389  -0.5114591   1.
+  28.          0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0     95.0              72.0               28.0       0.0  23.8                   0.0   32.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-1.56250000e+01 -1.42857143e-01 -1.00000000e+00 -8.87729620e-01
+  -1.86596920e-02  2.00000000e+00  3.20000000e+01  0.00000000e+00]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     85.0              62.0               20.0       0.0  20.3                   0.0   22.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -1.28571429  -1.40697674  -1.22191175  -0.83999204
+    0.          22.           0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       3.0    100.0              75.0               30.0     120.0  25.9                   0.0   38.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-0.625       0.14285714 -0.75581395 -0.72063856  0.22774001  3.
+  38.          0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     78.0              64.0               22.0      85.0  19.7                   0.0   26.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-5.         -1.         -1.47674419 -1.45583924 -0.67572557  1.
+  26.          0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     88.0              68.0               24.0       0.0  22.0                   0.0   30.0
+2026-01-23 17:03:32 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -0.71428571  -1.20930233  -1.12165711  -0.34719263
+    0.          30.           0.        ]]
+2026-01-23 17:03:32 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0     93.0              71.0               26.0      90.0  24.1                   0.0   35.0
+2026-01-23 17:03:33 DEBUG    [app:140] Dados após pré-processamento: [[-4.375      -0.42857143 -0.96511628 -0.95456605 -0.10079293  2.
+  35.          0.        ]]
+2026-01-23 17:03:33 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       4.0     97.0              74.0               29.0     110.0  26.3                   0.0   40.0
+2026-01-23 17:03:33 DEBUG    [app:140] Dados após pré-processamento: [[-1.875       0.         -0.70930233 -0.82089319  0.14560678  4.
+  40.          0.        ]]
+2026-01-23 17:03:33 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     83.0              65.0               21.0       0.0  21.8                   0.0   27.0
+2026-01-23 17:03:33 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -1.14285714  -1.23255814  -1.28874817  -0.59359233
+    1.          27.           0.        ]]
+2026-01-23 17:03:33 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       5.0    126.0              82.0               32.0       0.0  31.5                   1.0   48.0
+2026-01-23 17:03:33 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.42857143  -0.10465116   0.14823498   0.80267265
+    5.          48.           1.        ]]
+2026-01-23 17:03:33 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0    110.0              78.0               28.0       0.0  27.8                   0.0   39.0
+2026-01-23 17:03:33 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -0.14285714  -0.53488372  -0.38645643   0.47413971
+    2.          39.           0.        ]]
+2026-01-23 17:26:41 INFO     [app:81] Configuração de logging aplicada.
+2026-01-23 17:26:41 INFO     [app:20] Sistema de Logging Configurado.
+2026-01-23 17:26:55 INFO     [app:26] Modelo e pré-processador carregados com sucesso.
+2026-01-23 17:27:12 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     85.0              66.0               29.0      80.0  26.6                   0.0   31.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[-5.625       0.         -0.6744186  -1.22191175 -0.5114591   1.
+  31.          0.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0     90.0              70.0               25.0      80.0  24.0                   0.0   28.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[-5.625      -0.57142857 -0.97674419 -1.05482068 -0.18292616  2.
+  28.          0.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       4.0    115.0              72.0               35.0     150.0  29.5                   0.0   35.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[ 3.12500000e+00  8.57142857e-01 -3.37209302e-01 -2.19365364e-01
+  -1.86596920e-02  4.00000000e+00  3.50000000e+01  0.00000000e+00]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       3.0    125.0              80.0               30.0       0.0  32.0                   1.0   42.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.14285714  -0.04651163   0.11481676   0.63840618
+    3.          42.           1.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       6.0    148.0              72.0               35.0       0.0  33.6                   1.0   50.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[-1.56250000e+01  8.57142857e-01  1.39534884e-01  8.83435660e-01
+  -1.86596920e-02  6.00000000e+00  5.00000000e+01  1.00000000e+00]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0    183.0              64.0               30.0       0.0  23.3                   1.0   32.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.14285714  -1.05813953   2.05307311  -0.67572557
+    1.          32.           1.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       8.0    181.0              68.0               36.0     495.0  30.1                   1.0   53.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[46.25        1.         -0.26744186  1.98623668 -0.34719263  8.
+  53.          1.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     60.0              62.0               20.0       0.0  21.0                   0.0   22.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -1.28571429  -1.3255814   -2.05736707  -0.83999204
+    0.          22.           0.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0      10.0    200.0              90.0               40.0     600.0  40.0                   1.0   60.0
+2026-01-23 17:27:13 DEBUG    [app:140] Dados após pré-processamento: [[59.375       1.57142857  0.88372093  2.62118273  1.45973853 10.
+  60.          1.        ]]
+2026-01-23 17:27:13 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0    140.0              85.0               30.0     200.0  28.9                   1.0   45.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[ 9.375       0.14285714 -0.40697674  0.61608996  1.04907235  2.
+  45.          1.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       7.0    130.0              88.0               35.0       0.0  33.1                   1.0   44.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.85714286   0.08139535   0.28190783   1.29547206
+    7.          44.           1.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     92.0              70.0               25.0      80.0  22.1                   0.0   25.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-5.625      -0.57142857 -1.19767442 -0.98798426 -0.18292616  0.
+  25.          0.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     89.0              66.0               23.0      94.0  21.5                   0.0   28.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-3.875      -0.85714286 -1.26744186 -1.0882389  -0.5114591   1.
+  28.          0.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0     95.0              72.0               28.0       0.0  23.8                   0.0   32.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-1.56250000e+01 -1.42857143e-01 -1.00000000e+00 -8.87729620e-01
+  -1.86596920e-02  2.00000000e+00  3.20000000e+01  0.00000000e+00]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     85.0              62.0               20.0       0.0  20.3                   0.0   22.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -1.28571429  -1.40697674  -1.22191175  -0.83999204
+    0.          22.           0.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       3.0    100.0              75.0               30.0     120.0  25.9                   0.0   38.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-0.625       0.14285714 -0.75581395 -0.72063856  0.22774001  3.
+  38.          0.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     78.0              64.0               22.0      85.0  19.7                   0.0   26.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-5.         -1.         -1.47674419 -1.45583924 -0.67572557  1.
+  26.          0.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       0.0     88.0              68.0               24.0       0.0  22.0                   0.0   30.0
+2026-01-23 17:27:14 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -0.71428571  -1.20930233  -1.12165711  -0.34719263
+    0.          30.           0.        ]]
+2026-01-23 17:27:14 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0     93.0              71.0               26.0      90.0  24.1                   0.0   35.0
+2026-01-23 17:27:15 DEBUG    [app:140] Dados após pré-processamento: [[-4.375      -0.42857143 -0.96511628 -0.95456605 -0.10079293  2.
+  35.          0.        ]]
+2026-01-23 17:27:15 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       4.0     97.0              74.0               29.0     110.0  26.3                   0.0   40.0
+2026-01-23 17:27:15 DEBUG    [app:140] Dados após pré-processamento: [[-1.875       0.         -0.70930233 -0.82089319  0.14560678  4.
+  40.          0.        ]]
+2026-01-23 17:27:15 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       1.0     83.0              65.0               21.0       0.0  21.8                   0.0   27.0
+2026-01-23 17:27:15 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -1.14285714  -1.23255814  -1.28874817  -0.59359233
+    1.          27.           0.        ]]
+2026-01-23 17:27:15 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       5.0    126.0              82.0               32.0       0.0  31.5                   1.0   48.0
+2026-01-23 17:27:15 DEBUG    [app:140] Dados após pré-processamento: [[-15.625        0.42857143  -0.10465116   0.14823498   0.80267265
+    5.          48.           1.        ]]
+2026-01-23 17:27:15 DEBUG    [app:131] Dados antes ddo pré-processamento:    Gravidez  Glicose  Pressão arterial  Espessura da pele  Insulina   IMC  Diabetes Descendente  Idade
+0       2.0    110.0              78.0               28.0       0.0  27.8                   0.0   39.0
+2026-01-23 17:27:15 DEBUG    [app:140] Dados após pré-processamento: [[-15.625       -0.14285714  -0.53488372  -0.38645643   0.47413971
+    2.          39.           0.        ]]

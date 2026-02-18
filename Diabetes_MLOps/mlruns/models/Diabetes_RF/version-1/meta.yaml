@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1769267141492
+current_stage: None
+description: null
+last_updated_timestamp: 1769267141492
+name: Diabetes_RF
+run_id: b709d92fbf66477a8488dd393b84535e
+run_link: null
+source: file:///C:/Users/Jorge%20Maques/Documents/Especialista_em_AI/EAI_08_MLOps_e_Implanta%C3%A7%C3%A3o/Diabetes_MLOps/mlruns/583916828870336156/b709d92fbf66477a8488dd393b84535e/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Jorge%20Maques/Documents/Especialista_em_AI/EAI_08_MLOps_e_Implanta%C3%A7%C3%A3o/Diabetes_MLOps/mlruns/583916828870336156/b709d92fbf66477a8488dd393b84535e/artifacts/model
+user_id: null
+version: 1

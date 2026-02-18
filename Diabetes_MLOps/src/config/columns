@@ -1,0 +1,10 @@
+COLUMN_MAPPING_PT_TO_EN = {
+    "Gravidez": "Pregnancies",
+    "Glicose": "Glucose",
+    "Pressão arterial": "BloodPressure",
+    "Espessura da pele": "SkinThickness",
+    "Insulina": "Insulin",
+    "IMC": "BMI",
+    "Diabetes Descendente": "DiabetesPedigreeFunction",
+    "Idade": "Age"
+}

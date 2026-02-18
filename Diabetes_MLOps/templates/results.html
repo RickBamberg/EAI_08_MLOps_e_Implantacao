@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        {% if resultado == 1 %}
+            <h1 class="risk">Risco de Diabetes Detectado</h1>
+            <p>Probabilidade: {{ "%.2f"|format(probabilidade) }}%</p>
+            
+            {% if probabilidade > 80 %}
+            <div class="alert alert-danger">
+                <strong>Risco muito elevado!</strong> Recomendamos consulta médica urgente.
+            </div>
+            {% elif probabilidade > 60 %}
+            <div class="alert alert-warning">
+                <strong>Risco elevado!</strong> Consulte um médico para avaliação.
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                <strong>Risco moderado.</strong> Sugerimos acompanhamento preventivo.
+            </div>
+            {% endif %}
+            
+        {% else %}
+            <h1 class="no-risk">Risco Baixo de Diabetes</h1>
+            <p>Probabilidade: {{ "%.2f"|format(probabilidade) }}%</p>
+            
+            {% if probabilidade < 10 %}
+            <div class="alert alert-success">
+                <strong>Risco muito baixo.</strong> Continue com hábitos saudáveis.
+            </div>
+            {% elif probabilidade < 30 %}
+            <div class="alert alert-info">
+                <strong>Risco baixo.</strong> Mantenha acompanhamento regular.
+            </div>
+            {% else %}
+            <div class="alert alert-caution">
+                <strong>Risco abaixo do limiar.</strong> Fique atento a sintomas.
+            </div>
+            {% endif %}
+        {% endif %}
+
+        <h3>Dados Informados:</h3>
+        <ul>
+            {% for key, value in features.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="reference-box">
+        <h3>Referência de Risco de Diabetes</h3>
+        <table class="reference-table">
+            <tr>
+                <th>Probabilidade</th>
+                <th>Classificação</th>
+                <th>Recomendação</th>
+            </tr>
+            <tr>
+                <td>< 10%</td>
+                <td>Risco Muito Baixo</td>
+                <td>Continue com hábitos saudáveis</td>
+            </tr>
+            <tr>
+                <td>10-30%</td>
+                <td>Risco Baixo</td>
+                <td>Mantenha acompanhamento regular</td>
+            </tr>
+            <tr>
+                <td>30-60%</td>
+                <td>Risco Moderado</td>
+                <td>Sugerimos acompanhamento preventivo</td>
+            </tr>
+            <tr>
+                <td>60-80%</td>
+                <td>Risco Elevado</td>
+                <td>Consulte um médico para avaliação</td>
+            </tr>
+            <tr>
+                <td>> 80%</td>
+                <td>Risco Muito Elevado</td>
+                <td>Consulta médica urgente</td>
+            </tr>
+        </table>
+    </div>
+    <div class="clinical-tip">
+        <p>Dica: Valores de glicose acima de 126mg/dL em jejum sugerem diabetes.</p>
+    </div>
+    <a href="/" class="btn">Nova Consulta</a>
+</body>
+</html>

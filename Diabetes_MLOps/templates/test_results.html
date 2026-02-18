@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados dos Testes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados dos Testes</h1>
+    <table>
+        <tr>
+            <th>Características</th>
+            <th>Predição</th>
+            <th>Probabilidade</th>
+            <th>Correto?</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>
+                <ul>
+                    {% for key, value in result['Caso'].items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>{{ result['Predição'] }}</td>
+            <td>{{ result['Probabilidade'] }}</td>
+            <td class="{% if result['Correto'] %}correct{% else %}incorrect{% endif %}">
+                {{ result['Correto'] }}
+            </td>
+
+            <td>
+                {% set prob = result['Probabilidade'].replace('%','')|float %}
+
+                {% if prob >= 80 %}
+                    <div class="alert alert-danger">
+                        Risco muito elevado de Diabetes
+                    </div>
+                {% elif prob >= 60 %}
+                    <div class="alert alert-warning">
+                        Risco elevado de Diabetes
+                    </div>
+                {% elif prob >= 30 %}
+                    <div class="alert alert-caution">
+                        Atenção necessária
+                    </div>
+                {% elif prob >= 10 %}
+                    <div class="alert alert-info">
+                        Risco baixo de Diabetes
+                    </div>
+                {% else %}
+                    <div class="alert alert-success">
+                        Risco muito baixo de Diabetes
+                    </div>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

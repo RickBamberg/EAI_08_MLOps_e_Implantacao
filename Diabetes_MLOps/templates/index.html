@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predição de Diabetes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <form method="POST" action="{{ url_for('index') }}">
+        <div class="container">
+            <h1>Verificação de Risco de Diabetes</h1>
+            <form method="POST">
+                <div class="form-group">
+                    <label>Gravidez:</label>
+                    <input type="number" name="gravidez" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Glicose (mg/dL):</label>
+                    <input type="number" name="glicose" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Pressão Arterial:</label>
+                    <input type="number" name="pressao" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Espessura da pele:</label>
+                    <input type="number" name="pele" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Insulina:</label>
+                    <input type="number" name="insulina" required>
+                </div>
+
+                <div class="form-group">
+                    <label>IMC:</label>
+                    <input type="number" name="IMC" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Diabetes Descendente:</label>
+                    <input type="number" name="historia" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Idade:</label>
+                    <input type="number" name="idade" required>
+                </div>
+            
+                <button type="submit">Verificar Risco</button>
+        </div>
+    </form>
+</body>
+</html>
+
+// Adicione este código no final do seu arquivo HTML, antes do </body>
+<script>
+  // Configuração dos ranges válidos (deve bater com o RANGES do Python)
+  const VALIDATION_RULES = {
+    'gravidez': { min: 0, max: 20 },
+    'glicose': { min: 50, max: 300 },
+    'pressao': { min: 40, max: 140 },
+    'pele': { min: 5, max: 50 },
+    'insulina': { min: 0, max: 1000 },
+    'IMC': { min: 15, max: 50 },
+    'idade': { min: 15, max: 100 }
+  };
+
+  // Função de validação genérica
+  function validateInput(fieldName, value) {
+    const rule = VALIDATION_RULES[fieldName];
+    if (!rule) return true;
+    
+    const numValue = parseFloat(value);
+    return !isNaN(numValue) && numValue >= rule.min && numValue <= rule.max;
+  }
+
+  // Aplica a todos os campos numéricos
+  document.querySelectorAll('input[type="number"]').forEach(input => {
+    input.addEventListener('input', (e) => {
+      const isValid = validateInput(e.target.name, e.target.value);
+      
+      // Feedback visual
+      if (!isValid && e.target.value !== '') {
+        e.target.style.borderColor = 'red';
+        // Cria ou atualiza a mensagem de erro
+        let errorMsg = e.target.nextElementSibling;
+        if (!errorMsg || !errorMsg.classList.contains('error-msg')) {
+          errorMsg = document.createElement('div');
+          errorMsg.className = 'error-msg';
+          errorMsg.style.color = 'red';
+          e.target.parentNode.appendChild(errorMsg);
+        }
+        errorMsg.textContent = `Valor deve estar entre ${VALIDATION_RULES[e.target.name].min} e ${VALIDATION_RULES[e.target.name].max}`;
+      } else {
+        e.target.style.borderColor = '';
+        const errorMsg = e.target.nextElementSibling;
+        if (errorMsg && errorMsg.classList.contains('error-msg')) {
+          errorMsg.remove();
+        }
+      }
+    });
+  });
+
+  // Validação no submit
+  document.querySelector('form').addEventListener('submit', (e) => {
+    let isValid = true;
+    
+    document.querySelectorAll('input[type="number"]').forEach(input => {
+      if (!validateInput(input.name, input.value)) {
+        isValid = false;
+        input.style.borderColor = 'red';
+      }
+    });
+    
+    if (!isValid) {
+      e.preventDefault();
+      alert('Por favor, corrija os valores destacados em vermelho antes de enviar.');
+    }
+  });
+</script>

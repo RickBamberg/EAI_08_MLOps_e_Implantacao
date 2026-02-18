@@ -1,0 +1,276 @@
+================================================================================
+ESTRUTURA DO PROJETO - DIABETES MLOps
+================================================================================
+
+Diabetes_MLOps/
+│
+├── .git/                              # Repositório Git
+│
+├── app.py                             # Aplicação principal Flask/FastAPI
+│
+├── artifacts/                         # Artefatos e modelos treinados
+│   └── model_v1/                      # Modelos versão 1
+│       ├── metadata.json              # Metadados do modelo
+│       ├── model.pkl                  # Modelo treinado (pickle)
+│       └── preprocessor.pkl           # Preprocessador salvo
+│
+├── data/                              # Dados do projeto
+│   ├── inference/                     # Dados para inferência
+│   │   └── v1/                        # Versão 1 (vazio)
+│   ├── processed/                     # Dados processados (vazio)
+│   └── raw/                           # Dados brutos
+│       └── v1/                        # Versão 1
+│           ├── diabetes.csv           # Dataset de diabetes
+│           └── test_cases.csv         # Casos de teste
+│
+├── logs/                              # Logs da aplicação
+│
+├── mlruns/                            # MLflow tracking directory
+│   ├── 0/                             # Experimento padrão
+│   └── [experiment_id]/               # Experimentos com runs
+│       └── [run_id]/                  # Dados de cada run
+│           ├── artifacts/             # Artefatos do run
+│           │   ├── data_sample/       # Amostras de dados
+│           │   └── model/             # Modelo do run
+│           ├── metrics/               # Métricas (accuracy, precision, recall, roc_auc, tempo)
+│           ├── params/                # Parâmetros (max_depth, n_estimators, etc)
+│           └── tags/                  # Tags do run
+│
+├── notebooks/                         # Jupyter Notebooks
+│   ├── .ipynb_checkpoints/            # Checkpoints dos notebooks
+│   ├── Diabetes_ant.ipynb             # Notebook anterior (exploração)
+│   ├── Diabetes_MLOps.ipynb           # Notebook MLOps principal
+│   └── Diabetes_MLOpsX.ipynb          # Notebook MLOps versão estendida
+│
+├── src/                               # Código fonte
+│   ├── api/                           # API REST
+│   │   ├── main.py                    # Endpoints da API
+│   │   ├── schemas.py                 # Schemas Pydantic
+│   │   └── __pycache__/               # Cache Python
+│   │
+│   ├── config/                        # Configurações
+│   │   └── columns                    # Configuração de colunas
+│   │
+│   ├── data/                          # Módulo de dados
+│   │   ├── load_data.py               # Script para carregar dados
+│   │   └── __pycache__/               # Cache Python
+│   │
+│   ├── eda/                           # Análise Exploratória de Dados
+│   │   ├── eda_basic.py               # Script de EDA básica
+│   │   └── __pycache__/               # Cache Python
+│   │
+│   ├── features/                      # Engenharia de features
+│   │   └── v1/                        # Versão 1
+│   │       ├── build_features.py      # Script para construir features
+│   │       ├── rename_features.py     # Script para renomear features
+│   │       ├── zero_median_imputer.py # Imputador customizado
+│   │       └── __pycache__/           # Cache Python
+│   │
+│   ├── inference/                     # Módulo de inferência
+│   │   └── v1/                        # Versão 1
+│   │       ├── load_artifacts.py      # Carrega artefatos salvos
+│   │       ├── load_model_mlflow.py   # Carrega modelo do MLflow
+│   │       ├── predict.py             # Função de predição
+│   │       ├── preprocess_input.py    # Preprocessamento de entrada
+│   │       └── __pycache__/           # Cache Python
+│   │
+│   ├── models/                        # Módulo de modelos
+│   │   ├── base_model.py              # Classe base para modelos
+│   │   ├── scaler.py                  # Escalador genérico
+│   │   ├── scaler_minmax.py           # Escalador MinMax
+│   │   ├── scaler_misto.py            # Escalador misto
+│   │   ├── smote.py                   # Balanceamento com SMOTE
+│   │   ├── __pycache__/               # Cache Python
+│   │   └── v1/                        # Versão 1
+│   │       ├── evaluate.py            # Avaliação de modelos
+│   │       ├── pipeline.py            # Pipeline de ML
+│   │       ├── save_model.py          # Salvamento de modelos
+│   │       ├── train.py               # Script de treino geral
+│   │       ├── train_dt.py            # Treino Decision Tree
+│   │       ├── train_lr.py            # Treino Logistic Regression
+│   │       ├── train_rf.py            # Treino Random Forest
+│   │       ├── train_svc.py           # Treino Support Vector Classifier
+│   │       ├── train_xgb.py           # Treino XGBoost
+│   │       └── __pycache__/           # Cache Python
+│   │
+│   ├── schemas/                       # Schemas de dados
+│   │   └── request.py                 # Schemas de requisição
+│   │
+│   └── utils/                         # Utilitários (vazio)
+│
+├── static/                            # Arquivos estáticos (CSS, JS, etc)
+│   └── style.css                      # Estilos CSS
+│
+├── templates/                         # Templates HTML
+│   ├── index.html                     # Página inicial
+│   ├── results.html                   # Página de resultados
+│   └── test_results.html              # Página de resultados de teste
+│
+├── util/                              # Utilitários gerais
+│   ├── __init__.py                    # Inicializador do módulo
+│   ├── logging_config.py              # Configuração de logging
+│   └── __pycache__/                   # Cache Python
+│
+├── __pycache__/                       # Cache Python
+│
+├── ESTRUTURA_PROJETO.txt              # Este arquivo (documentação da estrutura)
+│
+├── requirements.txt                   # Dependências Python
+│
+└── teste.txt                          # Arquivo de teste
+
+================================================================================
+ESTRUTURA RESUMIDA
+================================================================================
+
+Raiz: Diabetes_MLOps
+├── Aplicação: app.py
+├── Configuração: requirements.txt, util/
+├── Dados: data/ (raw/v1, processed, inference/v1)
+├── Notebooks: notebooks/ (3 notebooks + checkpoints)
+├── MLflow: mlruns/ (experimentos e runs de treinamento)
+├── Artefatos: artifacts/model_v1/ (modelo, preprocessador, metadados)
+├── Interface: templates/ (3 templates HTML), static/ (CSS)
+└── Código: src/
+    ├── api/: main.py, schemas.py
+    ├── config/: columns
+    ├── data/: load_data.py
+    ├── eda/: eda_basic.py
+    ├── features/v1/: build_features.py, rename_features.py, zero_median_imputer.py
+    ├── inference/v1/: load_artifacts.py, load_model_mlflow.py, predict.py, preprocess_input.py
+    ├── models/: base_model.py, scaler.py, scaler_minmax.py, scaler_misto.py, smote.py
+    │   └── v1/: evaluate.py, pipeline.py, save_model.py, train.py, train_dt.py, train_lr.py, train_rf.py, train_svc.py, train_xgb.py
+    ├── schemas/: request.py
+    └── utils/: (vazio)
+
+================================================================================
+DESCRIÇÃO DOS COMPONENTES PRINCIPAIS
+================================================================================
+
+APLICAÇÃO:
+  • app.py: Aplicação principal (Flask/FastAPI) que serve a API web
+
+DADOS (data/):
+  • raw/v1/: Dados originais brutos
+    - diabetes.csv: Dataset completo com features de diabetes
+    - test_cases.csv: Casos de teste para validação
+  • processed/: Dados após pré-processamento (vazio - gerado em tempo de execução)
+  • inference/v1/: Dados para inferência em produção (vazio)
+
+CÓDIGO FONTE (src/):
+  
+  📊 Dados:
+    • load_data.py: Carregamento e leitura de dados CSV
+  
+  📈 EDA (Exploração Exploratória de Dados):
+    • eda_basic.py: Análise estatística e visualização de dados
+  
+  🔧 Features (Engenharia de Atributos):
+    • build_features.py: Construção e transformação de features
+    • rename_features.py: Renomeação e padronização de features
+    • zero_median_imputer.py: Imputação customizada de valores faltantes
+  
+  🤖 Modelos:
+    • base_model.py: Classe abstrata base para todos os modelos
+    • scaler.py: Escalador de features genérico
+    • scaler_minmax.py: Normalização MinMax
+    • scaler_misto.py: Escalador com múltiplas estratégias
+    • smote.py: Balanceamento de classes usando SMOTE
+    
+    Treino (v1/):
+      • pipeline.py: Pipeline completo de ML
+      • evaluate.py: Funções de avaliação (acurácia, precisão, recall, ROC-AUC)
+      • save_model.py: Salvamento e serialização de modelos
+      • train.py: Script de treino unificado
+      
+      Algoritmos específicos:
+      • train_dt.py: Decision Tree
+      • train_lr.py: Logistic Regression
+      • train_rf.py: Random Forest
+      • train_svc.py: Support Vector Classifier
+      • train_xgb.py: XGBoost
+  
+  🔮 Inferência (v1/):
+    • load_model_mlflow.py: Carregamento de modelos do MLflow
+    • load_artifacts.py: Carregamento de artefatos salvos
+    • predict.py: Função de predição
+    • preprocess_input.py: Pré-processamento de dados de entrada
+  
+  📡 API:
+    • main.py: Endpoints REST da aplicação
+    • schemas.py: Validação de entrada/saída com Pydantic
+  
+  ⚙️ Configuração:
+    • config/columns: Configuração de colunas de features
+    • schemas/request.py: Esquema de requisições
+  
+  🛠️ Utilitários:
+    • util/: Módulo de utilitários
+      - logging_config.py: Configuração de logs
+
+ARTEFATOS (artifacts/):
+  • model_v1/: Versão 1 do modelo em produção
+    - model.pkl: Modelo treinado (serializado)
+    - preprocessor.pkl: Preprocessador para normalização
+    - metadata.json: Metadados (versão, data, performance)
+
+NOTEBOOKS (notebooks/):
+  • Diabetes_ant.ipynb: Exploração inicial de dados
+  • Diabetes_MLOps.ipynb: Pipeline MLOps completo
+  • Diabetes_MLOpsX.ipynb: Versão estendida com testes adicionais
+
+INTERFACE WEB (templates/ + static/):
+  • index.html: Página inicial com formulário
+  • results.html: Página com resultados da predição
+  • test_results.html: Página com resultados de testes
+  • style.css: Estilos CSS
+
+MLflow (mlruns/):
+  • Rastreamento de experimentos e runs
+  • Armazenamento de parâmetros, métricas e modelos
+  • Histórico completo de treinamentos
+
+LOGS (logs/):
+  • Arquivo de log da aplicação
+
+================================================================================
+FLUXO TÍPICO DE EXECUÇÃO
+================================================================================
+
+1. DADOS:
+   src/data/load_data.py → carrega diabetes.csv
+
+2. EDA:
+   src/eda/eda_basic.py → analisa dados brutos
+
+3. FEATURES:
+   src/features/v1/build_features.py → cria features
+   src/features/v1/rename_features.py → padroniza nomes
+
+4. TREINAMENTO:
+   src/models/v1/train.py → executa pipeline
+   ├── Escalamento (scaler_minmax.py)
+   ├── Balanceamento (smote.py)
+   └── Treinamento com algoritmo selecionado (train_rf.py, etc)
+
+5. AVALIAÇÃO:
+   src/models/v1/evaluate.py → calcula métricas
+   src/models/v1/save_model.py → salva em artifacts/model_v1/
+
+6. MLFLOW:
+   Registra parâmetros, métricas e artefatos em mlruns/
+
+7. INFERÊNCIA:
+   src/inference/v1/predict.py → usa modelo para predições
+   ├── Carrega modelo (load_model_mlflow.py ou load_artifacts.py)
+   ├── Preprocessa entrada (preprocess_input.py)
+   └── Retorna predição
+
+8. API:
+   src/api/main.py → expõe endpoints REST
+   templates/ → interface web para usuários
+
+================================================================================
+Data: 25/01/2026
+Última Atualização: Estrutura completa do projeto
+================================================================================
