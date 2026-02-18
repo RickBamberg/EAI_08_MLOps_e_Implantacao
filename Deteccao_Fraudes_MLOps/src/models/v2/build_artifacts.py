@@ -74,7 +74,7 @@ X_train, X_test, y_train, y_test = split_data(
 )
 
 # Normalização das features
-from src.models.v1.scaler import scaler_data
+from src.models.v2.scaler import scaler_data
 
 X_train_scaled, X_test_scaled, scaler = scaler_data(X_train, X_test)
 

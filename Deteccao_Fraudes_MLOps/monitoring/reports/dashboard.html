@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Modelo - Detecção de Fraude</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        
+        .status-badge {
+            background: #d4edda;
+            color: #28a745;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 3px solid #28a745;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .metric-label {
+            font-weight: 500;
+            color: #666;
+        }
+        
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .feature-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .feature-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .progress-bar {
+            background: #e9ecef;
+            height: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .alert-box {
+            background: #fff3cd;
+            border-left: 5px solid #fd7e14;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .info-text {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .timestamp {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <div class="header">
+            <div>
+                <h1>🛡️ Monitor de Modelo - Detecção de Fraude</h1>
+                <p style="color: #666; margin-top: 10px;">Análise dos últimos 7 dias</p>
+            </div>
+            <div class="status-badge">✅ SAUDÁVEL</div>
+        </div>
+        
+        <!-- Resumo Executivo -->
+        <div class="grid">
+            <div class="card">
+                <h2>📊 Resumo</h2>
+                <div class="metric">
+                    <span class="metric-label">Alertas Críticos</span>
+                    <span class="metric-value" style="color: #28a745">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Avisos</span>
+                    <span class="metric-value" style="color: #fd7e14">1</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Features Monitoradas</span>
+                    <span class="metric-value">12</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>🎯 Predições do Modelo</h2>
+                <div class="metric">
+                    <span class="metric-label">Prob. Média Fraude</span>
+                    <span class="metric-value">1.76%</span>
+                </div>
+                <div class="info-text">Baseline: 1.21% | Mudança: +45.5% | <strong>Limite: < 50%</strong></div>
+                
+                <div class="metric">
+                    <span class="metric-label">Taxa de Fraude</span>
+                    <span class="metric-value">0.99%</span>
+                </div>
+                <div class="info-text">Baseline: 0.97%</div>
+            </div>
+            
+            <div class="card">
+                <h2>⚡ Performance</h2>
+                <div class="metric">
+                    <span class="metric-label">Latência Média</span>
+                    <span class="metric-value">25.7ms</span>
+                </div>
+                <div class="info-text">P95: 32.3ms | Máx: 109.4ms | <strong>Limite: < 500ms</strong></div>
+                
+                <div class="metric">
+                    <span class="metric-label">Volume</span>
+                    <span class="metric-value">9,992</span>
+                </div>
+                <div class="info-text">~1427 predições/dia</div>
+            </div>
+        </div>
+        
+        <!-- Qualidade dos Dados -->
+        <div class="card">
+            <h2>📈 Qualidade dos Dados (Data Drift)</h2>
+            
+            <div class="success-box"><strong>✅ Excelente!</strong> Todos os dados de entrada estão estáveis. O modelo está recebendo dados similares aos do treinamento.</div>
+            
+            
+            
+            
+            
+            <table class="feature-table">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Feature</th>
+                        <th>PSI</th>
+                        <th>Limite</th>
+                        <th>Mudança na Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">⚠️</td>
+                        <td><strong>amount_media_5steps</strong></td>
+                        <td>0.236</td>
+                        <td style="color: #fd7e14; font-weight: bold;">< 0.25</td>
+                        <td>+2.6%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>valor_relativo_cliente</strong></td>
+                        <td>0.081</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+0.1%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>category_encoded</strong></td>
+                        <td>0.002</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+0.4%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>amount</strong></td>
+                        <td>0.001</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+2.4%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>age</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+0.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>gender_encoded</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+0.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>qtd_transacoes</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+1.4%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>alert_freq</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+5.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>alert_valor</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+100.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>primeira_tx_merchant</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+474.4%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>mesma_localizacao</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+0.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-size: 1.5em;">✅</td>
+                        <td><strong>num_zipcodes_cliente</strong></td>
+                        <td>0.000</td>
+                        <td style="color: #28a745;">< 0.1</td>
+                        <td>+0.0%</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            
+            <div class="info-text" style="margin-top: 20px;">
+                <strong>PSI (Population Stability Index):</strong> Mede o quanto a distribuição dos dados mudou.<br>
+                • PSI < 0.1: Sem mudança significativa ✅<br>
+                • PSI 0.1-0.25: Mudança moderada ⚠️<br>
+                • PSI > 0.25: Mudança significativa 🚨
+            </div>
+        </div>
+        
+        <!-- Explicação para Leigos -->
+        <div class="card">
+            <h2>💡 O que isso significa?</h2>
+            
+            <h3 style="color: #667eea; margin: 20px 0 10px 0;">🎯 Como está o modelo?</h3>
+
+            <p style="line-height: 1.6;">
+                <strong style="color: #28a745;">✅ O modelo está funcionando perfeitamente!</strong><br><br>
+                
+                Os dados que o modelo está recebendo são muito parecidos com os dados usados no treinamento. 
+                Isso significa que as previsões de fraude continuam confiáveis e precisas.
+            </p>
+
+            <h3 style="color: #667eea; margin: 20px 0 10px 0;">📊 Estatísticas</h3>
+            <ul style="line-height: 2; color: #666;">
+                <li>De cada <strong>1000 transações</strong>, o modelo prevê <strong>10 fraudes</strong></li>
+                <li>O modelo responde em média em <strong>26 milissegundos</strong> (super rápido!)</li>
+                <li>Foram analisadas <strong>9,992 transações</strong> nos últimos 7 dias</li>
+            </ul>
+            
+            <h3 style="color: #667eea; margin: 20px 0 10px 0;">🔄 Próximos Passos</h3>
+            <ul style="line-height: 2; color: #666;">
+                <li>✅ Continue monitorando semanalmente</li>
+                
+                
+                <li>📧 Compartilhe este relatório com a equipe técnica</li>
+            </ul>
+        </div>
+        
+        <div class="timestamp">
+            Relatório gerado em 18/02/2026 às 07:57:05
+        </div>
+    </div>
+</body>
+</html>

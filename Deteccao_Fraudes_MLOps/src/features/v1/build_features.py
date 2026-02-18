@@ -8,7 +8,24 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 
 def build_features(df_features):
- 
+    
+    # remover aspas de todas as colunas string primeiro
+    for col in df_features.select_dtypes(include="object").columns:
+        df_features[col] = (
+            df_features[col]
+            .astype(str)
+            .str.strip()
+            .str.replace("'", "", regex=False)
+        )
+
+    # tratar age
+    df_features["age"] = pd.to_numeric(
+        df_features["age"],
+        errors="coerce"
+    )
+
+    df_features["age"] = df_features["age"].fillna(-1)
+
     # Frequência de transações por cliente no mesmo step
     freq_step = (
         df_features.groupby(['step', 'customer'])

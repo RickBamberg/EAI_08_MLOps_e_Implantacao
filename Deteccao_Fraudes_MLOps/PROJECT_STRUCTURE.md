@@ -1,0 +1,62 @@
+# Project Structure
+
+- [README.md](README.md)
+- [requirements.txt](requirements.txt)
+- [roadmap.md](roadmap.md)
+- data/
+  - raw/
+    - v1/
+      - [data/raw/v1/bs140513_032310.csv](data/raw/v1/bs140513_032310.csv)
+      - [data/raw/v1/metadata.yaml](data/raw/v1/metadata.yaml)
+      - [data/raw/v1/stats.yaml](data/raw/v1/stats.yaml)
+    - v2/
+      - [data/raw/v2/banksim_v2.csv](data/raw/v2/banksim_v2.csv)
+      - [data/raw/v2/metadata.yaml](data/raw/v2/metadata.yaml)
+      - [data/raw/v2/stats.yaml](data/raw/v2/stats.yaml)
+- doc/
+  - v1/
+    - [doc/v1/Relatorio_Fraudes_20251227.csv](doc/v1/Relatorio_Fraudes_20251227.csv)
+- models/
+  - model_v1/
+    - [models/model_v1/closure.md](models/model_v1/closure.md)
+    - [models/model_v1/model_info.yaml](models/model_v1/model_info.yaml)
+  - model_v2/
+    - [models/model_v2/model_info.yaml](models/model_v2/model_info.yaml)
+- monitoring/
+  - [monitoring/drift_decision.md](monitoring/drift_decision.md)
+  - [monitoring/model_v1_evaluation_on_v2.md](monitoring/model_v1_evaluation_on_v2.md)
+- notebooks/
+  - [notebooks/bs140513_032310.csv](notebooks/bs140513_032310.csv)
+  - [notebooks/fraud_detection_banksim_ant.ipynb](notebooks/fraud_detection_banksim_ant.ipynb)
+  - [notebooks/fraud_detection_banksim_MLOps.ipynb](notebooks/fraud_detection_banksim_MLOps.ipynb)
+  - [notebooks/Relatorio_Fraudes_20260109.csv](notebooks/Relatorio_Fraudes_20260109.csv)
+  - [notebooks/relatorio_para_auditoria.ipynb](notebooks/relatorio_para_auditoria.ipynb)
+- processed/
+  - v1/
+- src/
+  - config/
+    - [src/config/model.yaml](src/config/model.yaml)
+  - data/
+    - [src/data/load_data.py](src/data/load_data.py)
+    - __pycache__/
+  - eda/
+    - [src/eda/eda_basic.py](src/eda/eda_basic.py)
+    - __pycache__/
+  - features/
+    - [src/features/customer_features.py](src/features/customer_features.py)
+    - [src/features/feature_pipeline_v1.py](src/features/feature_pipeline_v1.py)
+    - [src/features/feature_pipeline.py](src/features/feature_pipeline.py)
+    - [src/features/features.yaml](src/features/features.yaml)
+    - [src/features/local_features.py](src/features/local_features.py)
+    - [src/features/merchant_features.py](src/features/merchant_features.py)
+    - [src/features/step_features.py](src/features/step_features.py)
+    - __pycache__/
+  - models/
+    - [src/models/base_model.py](src/models/base_model.py)
+    - [src/models/evaluate_v1.py](src/models/evaluate_v1.py)
+    - [src/models/normatiz_model.py](src/models/normatiz_model.py)
+    - [src/models/pipeline_v1.py](src/models/pipeline_v1.py)
+    - [src/models/train_gb_v1.py](src/models/train_gb_v1.py)
+    - [src/models/train_lr_v1.py](src/models/train_lr_v1.py)
+    - [src/models/train_rf_v1.py](src/models/train_rf_v1.py)
+    - __pycache__/
