@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-02-17T16:33:03.812615",
+  "window_days": 7,
+  "data_drift": {
+    "features": {
+      "age": {
+        "psi": 0.0002548922780682234,
+        "ks_statistic": 0.0024923846168897756,
+        "ks_pvalue": 0.9999999803157033,
+        "mean_baseline": 3.0,
+        "mean_production": 2.9986967418546366,
+        "mean_change_pct": 0.04344193817733066
+      },
+      "gender_encoded": {
+        "psi": 2.045965851175918e-06,
+        "ks_statistic": 0.0006326100422399117,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.4512900608348713,
+        "mean_production": 1.451528822055138,
+        "mean_change_pct": 0.016451654062369668
+      },
+      "category_encoded": {
+        "psi": 0.002079872217696644,
+        "ks_statistic": 0.00946446783072194,
+        "ks_pvalue": 0.34347859372797396,
+        "mean_baseline": 11.063420458510786,
+        "mean_production": 11.013934837092732,
+        "mean_change_pct": 0.44729043430269766
+      },
+      "amount": {
+        "psi": 0.0011654813199122524,
+        "ks_statistic": 0.005452150369027686,
+        "ks_pvalue": 0.9319586074432702,
+        "mean_baseline": 37.9574811336223,
+        "mean_production": 37.07445714285714,
+        "mean_change_pct": 2.3263503383017197
+      },
+      "qtd_transacoes": {
+        "psi": 0.0,
+        "ks_statistic": 0.015240679297389148,
+        "ks_pvalue": 0.021155337368865816,
+        "mean_baseline": 1.082230079417465,
+        "mean_production": 1.0976441102756893,
+        "mean_change_pct": 1.4242840917059805
+      },
+      "alert_freq": {
+        "psi": 0.0,
+        "ks_statistic": 8.187687336791427e-05,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 0.0016858868984305697,
+        "mean_production": 0.0016040100250626567,
+        "mean_change_pct": 4.856605065709267
+      },
+      "alert_valor": {
+        "psi": 0.0,
+        "ks_statistic": 0.01705226249385139,
+        "ks_pvalue": 0.006735964025107442,
+        "mean_baseline": 0.017052262493851347,
+        "mean_production": 0.0,
+        "mean_change_pct": 99.99999941356755
+      },
+      "valor_relativo_cliente": {
+        "psi": 0.08141818649959476,
+        "ks_statistic": 0.1176690322652636,
+        "ks_pvalue": 2.5499546836479465e-118,
+        "mean_baseline": 1.0012465433729147,
+        "mean_production": 0.999999953694263,
+        "mean_change_pct": 0.12450376850519317
+      },
+      "amount_media_5steps": {
+        "psi": 0.2362796870968337,
+        "ks_statistic": 0.1486035942300708,
+        "ks_pvalue": 8.556377662773176e-189,
+        "mean_baseline": 38.25514796109987,
+        "mean_production": 37.28438815371763,
+        "mean_change_pct": 2.537592609409936
+      },
+      "primeira_tx_merchant": {
+        "psi": 0.0,
+        "ks_statistic": 0.17330261754648546,
+        "ks_pvalue": 4.541085741003009e-257,
+        "mean_baseline": 0.036521943857023335,
+        "mean_production": 0.20982456140350877,
+        "mean_change_pct": 474.51641060075207
+      },
+      "mesma_localizacao": {
+        "psi": 0.0,
+        "ks_statistic": 0.0,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.0,
+        "mean_production": 1.0,
+        "mean_change_pct": 0.0
+      },
+      "num_zipcodes_cliente": {
+        "psi": 0.0,
+        "ks_statistic": 0.0,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.0,
+        "mean_production": 1.0,
+        "mean_change_pct": 0.0
+      }
+    },
+    "alertas": []
+  },
+  "prediction_drift": {
+    "mean_proba_baseline": 0.01208507561796334,
+    "mean_proba_production": 0.08843827116246983,
+    "mean_proba_change_pct": 631.7974165673781,
+    "fraud_rate_baseline": 0.009980786775247313,
+    "fraud_rate_production": 0.007017543859649123,
+    "fraud_rate_change_pct": 29.68947190874431,
+    "alerta": "M\u00e9dia mudou 631.8%"
+  },
+  "operational_performance": {
+    "latency": {
+      "mean": 26.113365413533835,
+      "p50": 31.24,
+      "p95": 32.36,
+      "p99": 46.88,
+      "max": 173.24
+    },
+    "volume": {
+      "total_predictions": 9975,
+      "predictions_per_day": 1425.0
+    }
+  },
+  "summary": {
+    "critical_alerts": 0,
+    "warnings": 1
+  }
+}

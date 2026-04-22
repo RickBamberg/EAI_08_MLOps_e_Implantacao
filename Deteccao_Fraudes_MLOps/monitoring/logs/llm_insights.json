@@ -1,0 +1,422 @@
+[
+  {
+    "request_id": "b2ba9849-92d0-4427-aa48-3ba06ee3b6af",
+    "generated_at": "2026-04-20T19:17:36.111098",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:** A transação apresenta valor atípico (R$ 99.999,99) para a categoria \"electronics\", combinado com nomes genéricos de cliente e estabelecimento (C_TEST, M_TEST). Isso sugere um possível **teste de limites do sistema** ou tentativa de simulação de fraude. Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação de identidade do cliente, além de auditar atividades recentes na conta para identificar padrões anômalos.",
+    "transaction": {
+      "step": 99,
+      "amount": 99999.99,
+      "customer": "C_TEST",
+      "merchant": "M_TEST",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 246
+  },
+  {
+    "request_id": "43fbf3d3-64db-410f-ba5b-cd7f5fd7cbd6",
+    "generated_at": "2026-04-20T19:25:26.600426",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nO valor de R$ 99.999,99 está no limite máximo comum para transações não bloqueadas automaticamente, combinado com um estabelecimento classificado como \"M_RISKY\" e categoria \"electronics\" (alta revenda). Recomendo **bloquear temporariamente a transação** e acionar verificação em duas etapas com o cliente, já que a probabilidade de fraude (42%) supera o limiar de risco aceitável para operações desse porte.",
+    "transaction": {
+      "step": 99,
+      "amount": 99999.99,
+      "customer": "C_FRAUDE_001",
+      "merchant": "M_RISKY",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 242
+  },
+  {
+    "request_id": "398fa42e-6ed8-4ffb-a4ae-8018e3dc7b77",
+    "generated_at": "2026-04-20T19:25:35.031149",
+    "fraud_probability": 0.573119401595332,
+    "insight": "**Insight Acionável:** A transação apresenta um risco elevado (57.3%) por combinar um valor incomumente alto (R$ 50.000) com uma categoria de alto risco (joalheria), sendo processada por um estabelecimento já monitorado (M_SUSPECT). Recomendo **bloqueio imediato da transação** e contato urgente com o cliente para verificação, pois esse padrão é consistente com testes de cartão ou lavagem de dinheiro.",
+    "transaction": {
+      "step": 95,
+      "amount": 50000.0,
+      "customer": "C_FRAUDE_002",
+      "merchant": "M_SUSPECT",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 242
+  },
+  {
+    "request_id": "194cd39d-1e07-4669-bb37-393990528641",
+    "generated_at": "2026-04-20T19:25:39.610834",
+    "fraud_probability": 0.573119401595332,
+    "insight": "**Insight Acionável:** A transação de R$ 25.000,00 na categoria \"travel\" com o merchant \"M_ONLINE\" apresenta um risco elevado (57.3%) por combinar um valor atípico para a categoria com um merchant genérico/online. Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação em duas etapas com o cliente para confirmar a legitimidade da operação.",
+    "transaction": {
+      "step": 90,
+      "amount": 25000.0,
+      "customer": "C_FRAUDE_003",
+      "merchant": "M_ONLINE",
+      "category": "travel",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 231
+  },
+  {
+    "request_id": "2307390c-7f83-4be6-92d0-9270c4eed57c",
+    "generated_at": "2026-04-20T19:25:44.625177",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nVerifique a compatibilidade entre o perfil do cliente e a categoria da transação. Clientes classificados como \"C_NORMAL_001\" costumam realizar transações de baixo a médio valor, enquanto R$ 15.000,00 em *fashion* é um valor atípico para essa segmentação. Recomendo contato imediato com o cliente para confirmar a compra e analisar transações anteriores no mesmo estabelecimento (M_STORE) para identificar padrões.",
+    "transaction": {
+      "step": 85,
+      "amount": 15000.0,
+      "customer": "C_NORMAL_001",
+      "merchant": "M_STORE",
+      "category": "fashion",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 242
+  },
+  {
+    "request_id": "80495f4b-0151-4420-92b1-41c3a80d40bc",
+    "generated_at": "2026-04-20T19:25:49.931676",
+    "fraud_probability": 0.4149273111998517,
+    "insight": "**Insight Acionável:**  \nA transação apresenta risco moderado (41,5%) por combinar um cliente com perfil normal (C_NORMAL_002) e um estabelecimento considerado seguro (M_SAFE), mas com valor elevado para a categoria **groceries** (R$ 1.000).  \n**Ação Recomendada:**  \nSolicite verificação adicional do cliente (ex.: confirmação por SMS ou biometria) antes de aprovar, focando na justificativa do valor atípico para compras de supermercado.",
+    "transaction": {
+      "step": 50,
+      "amount": 1000.0,
+      "customer": "C_NORMAL_002",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 253
+  },
+  {
+    "request_id": "b0d700d8-877d-412b-a502-708e3061fd80",
+    "generated_at": "2026-04-20T19:25:57.612169",
+    "fraud_probability": 0.4149273111998517,
+    "insight": "**Insight Acionável:** A transação apresenta um risco moderado (41.5%) por ser um valor atípico para a categoria \"groceries\" (supermercado) do cliente C_NORMAL_003. Recomendo **bloquear temporariamente a transação** e acionar a verificação em duas etapas via SMS/app para confirmar a compra, já que o estabelecimento (M_SAFE) é considerado seguro, mas o padrão de gasto é incomum.",
+    "transaction": {
+      "step": 30,
+      "amount": 500.0,
+      "customer": "C_NORMAL_003",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 236
+  },
+  {
+    "request_id": "e5eb44ff-fa2f-4256-9ea0-8f1f1d36218d",
+    "generated_at": "2026-04-20T19:26:04.093995",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nA transação de R$ 75.000,00 na categoria \"technology\" com o merchant \"M_CRYPTO\" apresenta risco elevado (42% de probabilidade de fraude). Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação em duas etapas:  \n1. Contatar o cliente via canal pré-cadastrado (ex.: telefone) para confirmar a compra.  \n2. Validar a origem do recurso e a relação histórica com criptoativos.  \n\nSe a confirmação falhar ou houver inconsistências, rejeitar a operação e sinalizar a",
+    "transaction": {
+      "step": 98,
+      "amount": 75000.0,
+      "customer": "C_FRAUDE_004",
+      "merchant": "M_CRYPTO",
+      "category": "technology",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 281
+  },
+  {
+    "request_id": "d880def4-0d71-4319-a0ee-e90354dc0acf",
+    "generated_at": "2026-04-20T19:26:08.136535",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nVerifique imediatamente a legitimidade do estabelecimento \"M_NEW\", pois transações de alto valor em categorias de alto risco (como eletrônicos) realizadas em lojas recém-cadastradas apresentam elevada correlação com fraudes de teste de cartão.",
+    "transaction": {
+      "step": 70,
+      "amount": 8000.0,
+      "customer": "C_SUSPECT_001",
+      "merchant": "M_NEW",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 202
+  },
+  {
+    "request_id": "0a2a4a31-d800-414e-89c3-40333a7be969",
+    "generated_at": "2026-04-20T19:26:14.941679",
+    "fraud_probability": 0.573119401595332,
+    "insight": "**Insight Acionável:** A transação apresenta um risco elevado (57.3%) por combinar um valor excepcionalmente alto (R$ 120.000) com a categoria \"jewelry\" (joalheria), que é frequentemente associada a lavagem de dinheiro ou compras com cartões roubados. Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação de identidade em dois níveis:  \n1. Contatar o cliente via canal pré-cadastrado (ex.: telefone) para confirmar a compra.  \n2. Validar a origem dos fundos e a relação histórica do cliente com",
+    "transaction": {
+      "step": 100,
+      "amount": 120000.0,
+      "customer": "C_FRAUDE_005",
+      "merchant": "M_LUXURY",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 280
+  },
+  {
+    "request_id": "2fd7f8e1-26a7-439e-9873-81b5ccbccb8e",
+    "generated_at": "2026-04-20T19:26:19.858083",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:** Verifique a frequência de transações do cliente C_NORMAL_004 na categoria \"food\" no período recente. Uma transação de R$ 200,00 em um estabelecimento do tipo M_COFFEE (cafeteria) é atípica para essa categoria, que normalmente envolve valores menores. Priorize a validação se houve um aumento súbito no ticket médio do cliente nesse segmento.",
+    "transaction": {
+      "step": 20,
+      "amount": 200.0,
+      "customer": "C_NORMAL_004",
+      "merchant": "M_COFFEE",
+      "category": "food",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 225
+  },
+  {
+    "request_id": "ea4e9626-0a17-42cb-a401-28e2b9481205",
+    "generated_at": "2026-04-21T10:00:22.746775",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nO valor de R$ 99.999,99 está no limite máximo comum para transações não bloqueadas automaticamente, combinado com um estabelecimento classificado como \"M_RISKY\" e categoria \"electronics\" (alta liquidez). Recomendo **bloquear temporariamente a transação** e acionar a verificação em duas etapas com o cliente, além de revisar imediatamente o histórico de compras recentes de \"C_FRAUDE_001\" para identificar padrões de teste de cartão.",
+    "transaction": {
+      "step": 99,
+      "amount": 99999.99,
+      "customer": "C_FRAUDE_001",
+      "merchant": "M_RISKY",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 250
+  },
+  {
+    "request_id": "159e1b36-b50b-4374-a747-df7df42d4db0",
+    "generated_at": "2026-04-21T10:00:32.882988",
+    "fraud_probability": 0.573119401595332,
+    "insight": "**Insight Acionável:** A transação apresenta um risco elevado (57.3%) por combinar um valor incomumente alto (R$ 50.000) com uma categoria de alto risco (jóias) e um estabelecimento já monitorado (M_SUSPECT). Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação de identidade do cliente (C_FRAUDE_002) via canal seguro, pois o padrão sugere possível teste de limite ou lavagem de recursos.",
+    "transaction": {
+      "step": 95,
+      "amount": 50000.0,
+      "customer": "C_FRAUDE_002",
+      "merchant": "M_SUSPECT",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 250
+  },
+  {
+    "request_id": "138152fc-b4b7-4fc0-9505-e26e7320c3e4",
+    "generated_at": "2026-04-21T10:00:40.446669",
+    "fraud_probability": 0.573119401595332,
+    "insight": "**Insight Acionável:** A transação de R$ 25.000,00 na categoria \"travel\" com o comerciante genérico \"M_ONLINE\" apresenta um risco elevado (57.3%). Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação em duas etapas: contatar o cliente via canal oficial (ex.: SMS/call) para confirmar a compra e validar a autenticidade do comerciante \"M_ONLINE\", que pode ser uma fachada para operações fraudulentas.",
+    "transaction": {
+      "step": 90,
+      "amount": 25000.0,
+      "customer": "C_FRAUDE_003",
+      "merchant": "M_ONLINE",
+      "category": "travel",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 254
+  },
+  {
+    "request_id": "acf578b1-724a-41e9-9fc3-8774e3ec456e",
+    "generated_at": "2026-04-21T10:00:48.710800",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nVerifique a compatibilidade entre o perfil do cliente e a categoria da transação. Clientes classificados como \"C_NORMAL_001\" costumam realizar transações de baixo a médio valor, enquanto R$ 15.000,00 em *fashion* é um valor atípico para essa segmentação. Sugiro:  \n1. **Contatar o cliente** para confirmar a compra.  \n2. **Analisar transações anteriores** do mesmo cliente em *fashion* para identificar padrões.  \n3. **Avaliar se o valor condiz com o ticket médio do estabelecimento \"M_STORE\"**.",
+    "transaction": {
+      "step": 85,
+      "amount": 15000.0,
+      "customer": "C_NORMAL_001",
+      "merchant": "M_STORE",
+      "category": "fashion",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 274
+  },
+  {
+    "request_id": "203f9d0b-4d95-4e8f-af35-571b8eaa2c0e",
+    "generated_at": "2026-04-21T10:00:57.078374",
+    "fraud_probability": 0.4149273111998517,
+    "insight": "**Insight Acionável:**  \nA transação apresenta risco moderado (41,5%) por ser um valor atípico para a categoria **groceries** do cliente C_NORMAL_002, mesmo que o estabelecimento M_SAFE seja considerado seguro. Recomendo **verificar o histórico recente de compras do cliente em supermercados** para confirmar se há um aumento súbito no ticket médio ou padrão incomum, como múltiplas transações de alto valor em curto intervalo. Se não houver justificativa comportamental, considere solicitar confirmação com o cliente via canal seguro.",
+    "transaction": {
+      "step": 50,
+      "amount": 1000.0,
+      "customer": "C_NORMAL_002",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 262
+  },
+  {
+    "request_id": "e7ef4a25-8dc7-4bdf-b1d1-e7c4de88791d",
+    "generated_at": "2026-04-21T10:01:06.295646",
+    "fraud_probability": 0.4149273111998517,
+    "insight": "**Insight Acionável:** A transação apresenta risco moderado (41.5%) por ser um valor atípico para a categoria \"groceries\" (supermercado) do cliente C_NORMAL_003. Recomendo **bloquear temporariamente a transação** e acionar a verificação em duas etapas via SMS/app para confirmar a compra, já que o estabelecimento (M_SAFE) é considerado seguro.",
+    "transaction": {
+      "step": 30,
+      "amount": 500.0,
+      "customer": "C_NORMAL_003",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 224
+  },
+  {
+    "request_id": "311b751d-15a1-48b2-aa66-42c9f9168f1e",
+    "generated_at": "2026-04-21T10:01:13.870772",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nA transação de alto valor (R$ 75.000) na categoria \"technology\" com o comerciante \"M_CRYPTO\" apresenta risco elevado, pois a combinação de valores altos e operações envolvendo criptoativos frequentemente mascara movimentações fraudulentas, como lavagem de dinheiro ou conversão de valores ilícitos. Recomenda-se **bloquear temporariamente a transação** e solicitar verificação documental imediata da origem dos recursos e da finalidade da compra.",
+    "transaction": {
+      "step": 98,
+      "amount": 75000.0,
+      "customer": "C_FRAUDE_004",
+      "merchant": "M_CRYPTO",
+      "category": "technology",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 252
+  },
+  {
+    "request_id": "0aaa1d1d-678d-46c9-84ef-86a627fd26f3",
+    "generated_at": "2026-04-21T10:01:19.207392",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:**  \nVerifique imediatamente a legitimidade do estabelecimento \"M_NEW\", pois transações de alto valor em categorias de alto risco (como eletrônicos) realizadas em lojas recém-cadastradas apresentam elevada correlação com fraudes de teste de cartão.",
+    "transaction": {
+      "step": 70,
+      "amount": 8000.0,
+      "customer": "C_SUSPECT_001",
+      "merchant": "M_NEW",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 202
+  },
+  {
+    "request_id": "7cfdc21b-78c6-43ec-8305-6b9bac953738",
+    "generated_at": "2026-04-21T10:01:25.560924",
+    "fraud_probability": 0.573119401595332,
+    "insight": "**Insight Acionável:** A transação apresenta alto risco por combinar valor elevado (R$ 120.000) com categoria de alto luxo (jewelry) e um cliente previamente marcado como suspeito (C_FRAUDE_005). Recomendo **bloquear temporariamente a transação** e acionar imediatamente a verificação de identidade em dois fatores, além de revisar o histórico recente do cliente para padrões de teste de cartão.",
+    "transaction": {
+      "step": 100,
+      "amount": 120000.0,
+      "customer": "C_FRAUDE_005",
+      "merchant": "M_LUXURY",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 236
+  },
+  {
+    "request_id": "b1e81b5e-4d54-43da-baab-924095cf31d5",
+    "generated_at": "2026-04-21T10:01:32.668788",
+    "fraud_probability": 0.4201904690945885,
+    "insight": "**Insight Acionável:** Verifique a frequência de transações do cliente C_NORMAL_004 na categoria \"food\" no período recente. Uma transação de R$ 200,00 em um estabelecimento do tipo M_COFFEE (cafeteria) é atípica para essa categoria, que normalmente envolve valores menores. A probabilidade de 42% indica risco moderado, justificando uma análise rápida do histórico comportamental do cliente para identificar se há um padrão de gastos incomum ou se esta é uma anomalia isolada.",
+    "transaction": {
+      "step": 20,
+      "amount": 200.0,
+      "customer": "C_NORMAL_004",
+      "merchant": "M_COFFEE",
+      "category": "food",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "llm_used": "deepseek-chat",
+    "success": true,
+    "tokens_used": 248
+  }
+]

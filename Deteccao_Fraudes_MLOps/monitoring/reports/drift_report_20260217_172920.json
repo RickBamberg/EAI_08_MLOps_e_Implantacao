@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-02-17T17:29:20.973209",
+  "window_days": 7,
+  "data_drift": {
+    "features": {
+      "age": {
+        "psi": 0.00020934758719654554,
+        "ks_statistic": 0.003961034662410046,
+        "ks_pvalue": 0.9978049511700303,
+        "mean_baseline": 3.0,
+        "mean_production": 3.0115195832915957,
+        "mean_change_pct": 0.3839861097070587
+      },
+      "gender_encoded": {
+        "psi": 4.992806500553088e-05,
+        "ks_statistic": 0.00033145493338160303,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.4512900608348713,
+        "mean_production": 1.4504657918461383,
+        "mean_change_pct": 0.05679560626233707
+      },
+      "category_encoded": {
+        "psi": 1.3579054110904053e-05,
+        "ks_statistic": 0.0024502081442613344,
+        "ks_pvalue": 0.9999999898102314,
+        "mean_baseline": 11.063420458510786,
+        "mean_production": 11.06140438745868,
+        "mean_change_pct": 0.018222854854410248
+      },
+      "amount": {
+        "psi": 0.00043206229031954356,
+        "ks_statistic": 0.005001674795002534,
+        "ks_pvalue": 0.9662891813574215,
+        "mean_baseline": 37.9574811336223,
+        "mean_production": 38.60451968346188,
+        "mean_change_pct": 1.7046403779009838
+      },
+      "qtd_transacoes": {
+        "psi": 0.0,
+        "ks_statistic": 0.07127737884506202,
+        "ks_pvalue": 1.212801505115614e-43,
+        "mean_baseline": 1.082230079417465,
+        "mean_production": 1.002203746368827,
+        "mean_change_pct": 7.394576676737683
+      },
+      "alert_freq": {
+        "psi": 0.0,
+        "ks_statistic": 0.001685886898430522,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 0.0016858868984305697,
+        "mean_production": 0.0,
+        "mean_change_pct": 99.99999406840433
+      },
+      "alert_valor": {
+        "psi": 0.0,
+        "ks_statistic": 0.01705226249385139,
+        "ks_pvalue": 0.0067046958962523,
+        "mean_baseline": 0.017052262493851347,
+        "mean_production": 0.0,
+        "mean_change_pct": 99.99999941356755
+      },
+      "valor_relativo_cliente": {
+        "psi": 0.11064825464436691,
+        "ks_statistic": 0.12823084616993263,
+        "ks_pvalue": 1.2571432050595146e-140,
+        "mean_baseline": 1.0012465433729147,
+        "mean_production": 0.9999097625039307,
+        "mean_change_pct": 0.13351165881155375
+      },
+      "amount_media_5steps": {
+        "psi": 0.17173321340265524,
+        "ks_statistic": 0.12937079557822784,
+        "ks_pvalue": 3.85885263877415e-143,
+        "mean_baseline": 38.25514796109987,
+        "mean_production": 38.70236101372333,
+        "mean_change_pct": 1.169027115192561
+      },
+      "primeira_tx_merchant": {
+        "psi": 0.0,
+        "ks_statistic": 0.3216870113668573,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 0.036521943857023335,
+        "mean_production": 0.3582089552238806,
+        "mean_change_pct": 880.8047341220329
+      },
+      "mesma_localizacao": {
+        "psi": 0.0,
+        "ks_statistic": 0.0,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.0,
+        "mean_production": 1.0,
+        "mean_change_pct": 0.0
+      },
+      "num_zipcodes_cliente": {
+        "psi": 0.0,
+        "ks_statistic": 0.0,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.0,
+        "mean_production": 1.0,
+        "mean_change_pct": 0.0
+      }
+    },
+    "alertas": []
+  },
+  "prediction_drift": {
+    "mean_proba_baseline": 0.01208507561796334,
+    "mean_proba_production": 0.09209629519687969,
+    "mean_proba_change_pct": 662.0663544710231,
+    "fraud_rate_baseline": 0.009980786775247313,
+    "fraud_rate_production": 0.007913452869878794,
+    "fraud_rate_change_pct": 20.71313545924497,
+    "diagnostico": {
+      "distribuicao": {
+        "p10": 0.058884931499616905,
+        "p25": 0.0667982283535676,
+        "p50": 0.078354155902076,
+        "p75": 0.09594958075814636,
+        "p90": 0.12712853590815942,
+        "p95": 0.14996426749281375,
+        "p99": 0.3670408650554278
+      },
+      "faixas_risco": {
+        "Baixo risco (< 0.1)": 7839,
+        "Risco moderado (0.1-0.3)": 2023,
+        "Risco alto (0.3-0.7)": 66,
+        "Risco cr\u00edtico (\u2265 0.7)": 55
+      },
+      "features_suspeitas": [
+        {
+          "feature": "category_encoded",
+          "diff": 0.053132149517677696,
+          "proba_q4": 0.08554991195469364,
+          "proba_q1_3": 0.13868206147237133
+        }
+      ]
+    }
+  },
+  "operational_performance": {
+    "latency": {
+      "mean": 26.530230391665828,
+      "p50": 31.25,
+      "p95": 33.49799999999999,
+      "p99": 46.88,
+      "max": 117.48
+    },
+    "volume": {
+      "total_predictions": 9983,
+      "predictions_per_day": 1426.1
+    }
+  },
+  "summary": {
+    "critical_alerts": 0,
+    "warnings": 2
+  }
+}

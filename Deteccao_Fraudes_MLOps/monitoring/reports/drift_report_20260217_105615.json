@@ -1,0 +1,239 @@
+{
+  "timestamp": "2026-02-17T10:56:15.062328",
+  "window_days": 7,
+  "data_drift": {
+    "features": {
+      "step": {
+        "psi": 8.28080715045937,
+        "ks_statistic": 0.9811798685764976,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 94.99524714429258,
+        "mean_production": 178.11600440396356,
+        "mean_change_pct": 87.49991158328963
+      },
+      "age": {
+        "psi": 0.0002545506799813615,
+        "ks_statistic": 0.002957826070589087,
+        "ks_pvalue": 0.9999944779918696,
+        "mean_baseline": 3.0,
+        "mean_production": 3.0004003603242917,
+        "mean_change_pct": 0.013345344142611591
+      },
+      "gender_encoded": {
+        "psi": 1.8298803999773187e-06,
+        "ks_statistic": 0.0006077355248483851,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.4512900608348713,
+        "mean_production": 1.4515063557201482,
+        "mean_change_pct": 0.014903628922913442
+      },
+      "category_encoded": {
+        "psi": 0.002085127818835057,
+        "ks_statistic": 0.009387797323506045,
+        "ks_pvalue": 0.3522574598514928,
+        "mean_baseline": 11.063420458510786,
+        "mean_production": 11.014613151836652,
+        "mean_change_pct": 0.44115928574463575
+      },
+      "amount": {
+        "psi": 0.0011521619774658304,
+        "ks_statistic": 0.005408619591717789,
+        "ks_pvalue": 0.9355516952429853,
+        "mean_baseline": 37.9574811336223,
+        "mean_production": 37.05535682113903,
+        "mean_change_pct": 2.3766706470988814
+      },
+      "qtd_transacoes": {
+        "psi": 0.0,
+        "ks_statistic": 0.015498956859977375,
+        "ks_pvalue": 0.017981892342028842,
+        "mean_baseline": 1.082230079417465,
+        "mean_production": 1.0978880992893605,
+        "mean_change_pct": 1.446829114089757
+      },
+      "alert_freq": {
+        "psi": 0.0,
+        "ks_statistic": 8.444560126308343e-05,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 0.0016858868984305697,
+        "mean_production": 0.0016014412971674507,
+        "mean_change_pct": 5.008971618010656
+      },
+      "alert_valor": {
+        "psi": 0.0,
+        "ks_statistic": 0.01705226249385139,
+        "ks_pvalue": 0.0066774553713559,
+        "mean_baseline": 0.017052262493851347,
+        "mean_production": 0.0,
+        "mean_change_pct": 99.99999941356755
+      },
+      "valor_relativo_cliente": {
+        "psi": 0.08126036885809962,
+        "ks_statistic": 0.11743287987849144,
+        "ks_pvalue": 5.016908607327339e-118,
+        "mean_baseline": 1.0012465433729147,
+        "mean_production": 0.9999959991332413,
+        "mean_change_pct": 0.1248987322678574
+      },
+      "total_tx_cliente": {
+        "psi": 6.359582641497491,
+        "ks_statistic": 0.9998990990384979,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 157.2638644227414,
+        "mean_production": 2.804624161745571,
+        "mean_change_pct": 98.21661246075915
+      },
+      "volume_total_cliente": {
+        "psi": 6.155119890041013,
+        "ks_statistic": 0.9961334828895331,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 5672.523262590548,
+        "mean_production": 109.25260634571114,
+        "mean_change_pct": 98.07400337930187
+      },
+      "num_categorias_cliente": {
+        "psi": 7.354763559244008,
+        "ks_statistic": 0.997159758745222,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 7.751443093959816,
+        "mean_production": 1.338304474026624,
+        "mean_change_pct": 82.73477005653037
+      },
+      "num_merchants_cliente": {
+        "psi": 7.250860006462312,
+        "ks_statistic": 0.9927625509018565,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 11.382929659417213,
+        "mean_production": 1.486838154338905,
+        "mean_change_pct": 86.93800103389229
+      },
+      "amount_mean_cliente": {
+        "psi": 0.6872847407082077,
+        "ks_statistic": 0.41872120746170555,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 37.87551596000378,
+        "mean_production": 37.05542354785974,
+        "mean_change_pct": 2.1652309977978583
+      },
+      "amount_std_cliente": {
+        "psi": 0.5830057275631859,
+        "ks_statistic": 0.5759063865214854,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 55.24335490134855,
+        "mean_production": 26.173267700977867,
+        "mean_change_pct": 52.62187144902821
+      },
+      "tx_ultimos_5_steps": {
+        "psi": 0.0,
+        "ks_statistic": 0.9682305242941571,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 4.930958517092202,
+        "mean_production": 1.9017115403863478,
+        "mean_change_pct": 61.43322776178566
+      },
+      "step_diff": {
+        "psi": 1.0710339074516262,
+        "ks_statistic": 0.38546621059211006,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 1.2009379585212965,
+        "mean_production": 0.5855269742768492,
+        "mean_change_pct": 51.244194575292866
+      },
+      "amount_media_5steps": {
+        "psi": 0.2362674394196491,
+        "ks_statistic": 0.14879667025413157,
+        "ks_pvalue": 1.4131507990543228e-189,
+        "mean_baseline": 38.25514796109987,
+        "mean_production": 37.25824910753011,
+        "mean_change_pct": 2.605920788963778
+      },
+      "amount_desvio_5steps": {
+        "psi": 0.7573617739376411,
+        "ks_statistic": 0.23597785891114542,
+        "ks_pvalue": 0.0,
+        "mean_baseline": -0.29766682747757406,
+        "mean_production": -0.20289228639108534,
+        "mean_change_pct": 31.83913432940048
+      },
+      "tx_cliente_merchant": {
+        "psi": 8.309138864161001,
+        "ks_statistic": 0.9146693181197105,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 79.8613116284154,
+        "mean_production": 2.2176959263337004,
+        "mean_change_pct": 97.22306598625678
+      },
+      "primeira_tx_merchant": {
+        "psi": 0.0,
+        "ks_statistic": 0.17326686607191266,
+        "ks_pvalue": 2.3439901160843293e-257,
+        "mean_baseline": 0.036521943857023335,
+        "mean_production": 0.20978880992893603,
+        "mean_change_pct": 474.4185202074729
+      },
+      "prop_tx_merchant": {
+        "psi": 3.1689759583333137,
+        "ks_statistic": 0.6613952557301571,
+        "ks_pvalue": 0.0,
+        "mean_baseline": 0.5032510054005157,
+        "mean_production": 0.8224506818040999,
+        "mean_change_pct": 63.42752879075113
+      },
+      "mesma_localizacao": {
+        "psi": 0.0,
+        "ks_statistic": 0.0,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.0,
+        "mean_production": 1.0,
+        "mean_change_pct": 0.0
+      },
+      "num_zipcodes_cliente": {
+        "psi": 0.0,
+        "ks_statistic": 0.0,
+        "ks_pvalue": 1.0,
+        "mean_baseline": 1.0,
+        "mean_production": 1.0,
+        "mean_change_pct": 0.0
+      }
+    },
+    "alertas": [
+      "step: PSI=8.281",
+      "total_tx_cliente: PSI=6.360",
+      "volume_total_cliente: PSI=6.155",
+      "num_categorias_cliente: PSI=7.355",
+      "num_merchants_cliente: PSI=7.251",
+      "amount_mean_cliente: PSI=0.687",
+      "amount_std_cliente: PSI=0.583",
+      "step_diff: PSI=1.071",
+      "amount_desvio_5steps: PSI=0.757",
+      "tx_cliente_merchant: PSI=8.309",
+      "prop_tx_merchant: PSI=3.169"
+    ]
+  },
+  "prediction_drift": {
+    "mean_proba_baseline": 0.01208507561796334,
+    "mean_proba_production": 0.08841053917040015,
+    "mean_proba_change_pct": 631.5679435136187,
+    "fraud_rate_baseline": 0.009980786775247313,
+    "fraud_rate_production": 0.0070063056751075966,
+    "fraud_rate_change_pct": 29.802070090450776,
+    "alerta": "M\u00e9dia mudou 631.6%"
+  },
+  "operational_performance": {
+    "latency": {
+      "mean": 25.717949154238813,
+      "p50": 31.24,
+      "p95": 31.3,
+      "p99": 46.84,
+      "max": 126.96
+    },
+    "volume": {
+      "total_predictions": 9991,
+      "predictions_per_day": 1427.3
+    }
+  },
+  "summary": {
+    "critical_alerts": 11,
+    "warnings": 1
+  }
+}

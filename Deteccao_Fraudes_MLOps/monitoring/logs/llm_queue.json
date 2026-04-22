@@ -1,0 +1,359 @@
+[
+  {
+    "request_id": "b2ba9849-92d0-4427-aa48-3ba06ee3b6af",
+    "timestamp": "2026-04-20T19:17:26.765485",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 99,
+      "amount": 99999.99,
+      "customer": "C_TEST",
+      "merchant": "M_TEST",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "43fbf3d3-64db-410f-ba5b-cd7f5fd7cbd6",
+    "timestamp": "2026-04-20T19:25:19.359015",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 99,
+      "amount": 99999.99,
+      "customer": "C_FRAUDE_001",
+      "merchant": "M_RISKY",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "398fa42e-6ed8-4ffb-a4ae-8018e3dc7b77",
+    "timestamp": "2026-04-20T19:25:21.954321",
+    "fraud_probability": 0.573119401595332,
+    "transaction": {
+      "step": 95,
+      "amount": 50000.0,
+      "customer": "C_FRAUDE_002",
+      "merchant": "M_SUSPECT",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "194cd39d-1e07-4669-bb37-393990528641",
+    "timestamp": "2026-04-20T19:25:24.545640",
+    "fraud_probability": 0.573119401595332,
+    "transaction": {
+      "step": 90,
+      "amount": 25000.0,
+      "customer": "C_FRAUDE_003",
+      "merchant": "M_ONLINE",
+      "category": "travel",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "2307390c-7f83-4be6-92d0-9270c4eed57c",
+    "timestamp": "2026-04-20T19:25:27.165419",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 85,
+      "amount": 15000.0,
+      "customer": "C_NORMAL_001",
+      "merchant": "M_STORE",
+      "category": "fashion",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "80495f4b-0151-4420-92b1-41c3a80d40bc",
+    "timestamp": "2026-04-20T19:25:29.791700",
+    "fraud_probability": 0.4149273111998517,
+    "transaction": {
+      "step": 50,
+      "amount": 1000.0,
+      "customer": "C_NORMAL_002",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "b0d700d8-877d-412b-a502-708e3061fd80",
+    "timestamp": "2026-04-20T19:25:32.420441",
+    "fraud_probability": 0.4149273111998517,
+    "transaction": {
+      "step": 30,
+      "amount": 500.0,
+      "customer": "C_NORMAL_003",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "e5eb44ff-fa2f-4256-9ea0-8f1f1d36218d",
+    "timestamp": "2026-04-20T19:25:35.031149",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 98,
+      "amount": 75000.0,
+      "customer": "C_FRAUDE_004",
+      "merchant": "M_CRYPTO",
+      "category": "technology",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "d880def4-0d71-4319-a0ee-e90354dc0acf",
+    "timestamp": "2026-04-20T19:25:37.641901",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 70,
+      "amount": 8000.0,
+      "customer": "C_SUSPECT_001",
+      "merchant": "M_NEW",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "0a2a4a31-d800-414e-89c3-40333a7be969",
+    "timestamp": "2026-04-20T19:25:40.249638",
+    "fraud_probability": 0.573119401595332,
+    "transaction": {
+      "step": 100,
+      "amount": 120000.0,
+      "customer": "C_FRAUDE_005",
+      "merchant": "M_LUXURY",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "2fd7f8e1-26a7-439e-9873-81b5ccbccb8e",
+    "timestamp": "2026-04-20T19:25:42.872513",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 20,
+      "amount": 200.0,
+      "customer": "C_NORMAL_004",
+      "merchant": "M_COFFEE",
+      "category": "food",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "ea4e9626-0a17-42cb-a401-28e2b9481205",
+    "timestamp": "2026-04-21T10:00:14.275189",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 99,
+      "amount": 99999.99,
+      "customer": "C_FRAUDE_001",
+      "merchant": "M_RISKY",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "159e1b36-b50b-4374-a747-df7df42d4db0",
+    "timestamp": "2026-04-21T10:00:16.867547",
+    "fraud_probability": 0.573119401595332,
+    "transaction": {
+      "step": 95,
+      "amount": 50000.0,
+      "customer": "C_FRAUDE_002",
+      "merchant": "M_SUSPECT",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "138152fc-b4b7-4fc0-9505-e26e7320c3e4",
+    "timestamp": "2026-04-21T10:00:19.483186",
+    "fraud_probability": 0.573119401595332,
+    "transaction": {
+      "step": 90,
+      "amount": 25000.0,
+      "customer": "C_FRAUDE_003",
+      "merchant": "M_ONLINE",
+      "category": "travel",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "acf578b1-724a-41e9-9fc3-8774e3ec456e",
+    "timestamp": "2026-04-21T10:00:22.083373",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 85,
+      "amount": 15000.0,
+      "customer": "C_NORMAL_001",
+      "merchant": "M_STORE",
+      "category": "fashion",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "203f9d0b-4d95-4e8f-af35-571b8eaa2c0e",
+    "timestamp": "2026-04-21T10:00:24.715421",
+    "fraud_probability": 0.4149273111998517,
+    "transaction": {
+      "step": 50,
+      "amount": 1000.0,
+      "customer": "C_NORMAL_002",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "e7ef4a25-8dc7-4bdf-b1d1-e7c4de88791d",
+    "timestamp": "2026-04-21T10:00:27.362174",
+    "fraud_probability": 0.4149273111998517,
+    "transaction": {
+      "step": 30,
+      "amount": 500.0,
+      "customer": "C_NORMAL_003",
+      "merchant": "M_SAFE",
+      "category": "groceries",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "311b751d-15a1-48b2-aa66-42c9f9168f1e",
+    "timestamp": "2026-04-21T10:00:29.992751",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 98,
+      "amount": 75000.0,
+      "customer": "C_FRAUDE_004",
+      "merchant": "M_CRYPTO",
+      "category": "technology",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "0aaa1d1d-678d-46c9-84ef-86a627fd26f3",
+    "timestamp": "2026-04-21T10:00:32.614859",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 70,
+      "amount": 8000.0,
+      "customer": "C_SUSPECT_001",
+      "merchant": "M_NEW",
+      "category": "electronics",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "7cfdc21b-78c6-43ec-8305-6b9bac953738",
+    "timestamp": "2026-04-21T10:00:35.236885",
+    "fraud_probability": 0.573119401595332,
+    "transaction": {
+      "step": 100,
+      "amount": 120000.0,
+      "customer": "C_FRAUDE_005",
+      "merchant": "M_LUXURY",
+      "category": "jewelry",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  },
+  {
+    "request_id": "b1e81b5e-4d54-43da-baab-924095cf31d5",
+    "timestamp": "2026-04-21T10:00:37.846793",
+    "fraud_probability": 0.4201904690945885,
+    "transaction": {
+      "step": 20,
+      "amount": 200.0,
+      "customer": "C_NORMAL_004",
+      "merchant": "M_COFFEE",
+      "category": "food",
+      "zipcodeOri": null,
+      "zipMerchant": null,
+      "gender": null,
+      "age": null
+    },
+    "processed": false
+  }
+]

@@ -1,6 +1,7 @@
 """
 Gerador de Dashboard HTML para Relatórios de Drift
-Execução: python generate_dashboard.py
+Execução: python monitoring/dashboard/generate_dashboard.py
+          python -m monitoring.dashboard.generate_dashboard
 """
 
 import json

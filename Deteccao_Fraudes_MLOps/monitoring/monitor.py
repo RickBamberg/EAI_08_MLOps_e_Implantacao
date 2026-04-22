@@ -13,7 +13,7 @@ from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
 
-from features_config import FEATURES_DEPENDENTES_ESCOPO
+from features_config_cl import FEATURES_DEPENDENTES_ESCOPO
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 LOG_PATH = os.path.join(BASE_DIR, "monitoring", "logs", "prediction_log.csv")
